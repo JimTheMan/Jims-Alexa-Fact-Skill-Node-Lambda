@@ -91,12 +91,16 @@ const languageStrings = {
 
 const handlers = {
     'LaunchRequest': function () {
+
+      console.log('launching request!')
         this.emit('GetFact');
     },
     'GetNewFactIntent': function () {
+      console.log('new fact intent!')
         this.emit('GetFact');
     },
     'GetFact': function () {
+      console.log('getting fact!')
         // Get a random space fact from the space facts list
         // Use this.t() to get corresponding language data
         const factArr = this.t('FACTS');
